@@ -1,1 +1,0 @@
-# loja-cuiaba-futebol
