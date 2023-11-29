@@ -184,7 +184,9 @@
             <div class="checkbox">
                 <label><input type="checkbox"> Lembre-me</label>
             </div>
-            <button type="submit" class="btn btn-success" style="margin-left: 5px;"><b>Entrar</b></button>
+            <button type="submit" id="btnEntrar" class="btn btn-success"
+                style="margin-left: 5px;"><b>Entrar</b></button>
+
         </form>
     </div>
     <br />
@@ -252,7 +254,8 @@
                             <p class="card-text">Descrição do Produto 1.</p>
                             <p class="card-text">R$ 19,99</p>
                             <p class="card-text add-to-cart-msg" style="display: none;">Adicionar ao carrinho</p>
-                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao carrinho</button>
+                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao
+                                carrinho</button>
                         </div>
                     </div>
                 </div>
@@ -263,7 +266,8 @@
                             <h5 class="card-title">Camisa 2</h5>
                             <p class="card-text">Descrição do Produto 2.</p>
                             <p class="card-text">R$ 24,99</p>
-                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao carrinho</button>
+                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao
+                                carrinho</button>
                         </div>
                     </div>
                 </div>
@@ -274,7 +278,8 @@
                             <h5 class="card-title">Camisa 3</h5>
                             <p class="card-text">Descrição do Produto 3.</p>
                             <p class="card-text">R$ 29,99</p>
-                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao carrinho</button>
+                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao
+                                carrinho</button>
                         </div>
                     </div>
                 </div>
@@ -285,7 +290,8 @@
                             <h5 class="card-title">Camisa 4</h5>
                             <p class="card-text">Descrição do Produto 1.</p>
                             <p class="card-text">R$ 19,99</p>
-                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao carrinho</button>
+                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao
+                                carrinho</button>
                         </div>
                     </div>
                 </div>
@@ -296,7 +302,8 @@
                             <h5 class="card-title">Camisa 5</h5>
                             <p class="card-text">Descrição do Produto 2.</p>
                             <p class="card-text">R$ 24,99</p>
-                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao carrinho</button>
+                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao
+                                carrinho</button>
                         </div>
                     </div>
                 </div>
@@ -307,7 +314,8 @@
                             <h5 class="card-title">Camisa 6</h5>
                             <p class="card-text">Descrição do Produto 3.</p>
                             <p class="card-text">R$ 29,99</p>
-                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao carrinho</button>
+                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao
+                                carrinho</button>
                         </div>
                     </div>
                 </div>
@@ -318,7 +326,8 @@
                             <h5 class="card-title">Camisa 7</h5>
                             <p class="card-text">Descrição do Produto 1.</p>
                             <p class="card-text">R$ 19,99</p>
-                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao carrinho</button>
+                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao
+                                carrinho</button>
                         </div>
                     </div>
                 </div>
@@ -329,7 +338,8 @@
                             <h5 class="card-title">Camisa 8</h5>
                             <p class="card-text">Descrição do Produto 2.</p>
                             <p class="card-text">R$ 24,99</p>
-                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao carrinho</button>
+                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao
+                                carrinho</button>
 
                         </div>
                     </div>
@@ -341,7 +351,8 @@
                             <h5 class="card-title">Camisa 9</h5>
                             <p class="card-text">Descrição do Produto 3.</p>
                             <p class="card-text">R$ 29,99</p>
-                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao carrinho</button>
+                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Adicionar ao
+                                carrinho</button>
                         </div>
                     </div>
                 </div>
@@ -390,6 +401,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
     <script>
+      
+
         function addToCart(btn) {
             let card = $(btn).closest('.card');
             let productName = card.find('.card-title').text();
@@ -397,13 +410,29 @@
             alert(`${productName} adicionado ao carrinho com sucesso!`);
         }
 
+
+
         $('form.was-validated').submit(function (event) {
             event.preventDefault();
             let userEmail = $('#nome').val();
             let userMessage = $('#mensagem').val();
 
-            alert(`Mensagem enviada com sucesso para ${userEmail}: ${userMessage}`);
+            alert(`Mensagem enviada com sucesso de ${userEmail}: ${userMessage}`);
         });
+
+        $('#btnEntrar').click(function (event) {
+            event.preventDefault();
+
+            let userEmail = $('#email').val();
+            let userPassword = $('#pwd').val();
+
+            if (userEmail && userPassword) {
+                alert('Logado com sucesso!');
+            } else {
+                alert('Por favor, preencha os campos de email e senha.');
+            }
+        });
+
 
     </script>
 
